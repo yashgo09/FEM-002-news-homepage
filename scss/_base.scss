@@ -1,0 +1,29 @@
+:root {
+  --clr-primary-soft-orange: hsl(35, 77%, 62%);
+  --clr-primary-soft-red: hsl(5, 85%, 63%);
+
+  --clr-neutral-off-white: hsl(36, 100%, 99%);
+  --clr-neutral-grayish-blue: hsl(233, 8%, 79%);
+  --clr-neutral-dark-grayish-blue: hsl(236, 13%, 42%);
+  --clr-neutral-very-dark-blue: hsl(240, 100%, 5%);
+
+  --ff-primary: "Inter", sans-serif;
+
+  --fs-para: 0.9375rem;
+
+  // Declaring here so that all grids get consistent gap
+  --grid-gap: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-para);
+}
