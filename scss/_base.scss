@@ -26,4 +26,11 @@
 body {
   font-family: var(--ff-primary);
   font-size: var(--fs-para);
+  line-height: 1.8;
+  background-color: var(--clr-neutral-off-white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
