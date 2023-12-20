@@ -125,21 +125,19 @@ header {
 }
 
 .other-articles {
-  margin-block: 1rem;
+  margin-block: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
 }
 
 .other-article-card {
+  // Not the same grid as the main layout grid
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
 
   &__img {
     height: 100%;
     object-fit: cover;
-  }
-
-  &__info {
-    grid-column: span 2;
   }
 
   &__title {
