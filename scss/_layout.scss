@@ -21,6 +21,10 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+
+  .logo {
+    cursor: pointer;
+  }
 }
 
 .nav {
@@ -39,7 +43,7 @@ header {
   &__link {
     &:hover,
     &:focus-visible {
-      color: var(--clr-primary-soft-orange);
+      color: var(--clr-primary-soft-red);
     }
   }
 }
@@ -74,6 +78,7 @@ header {
 
     &__title {
       font-size: 3.2rem;
+      margin: 0;
     }
 
     &__details {
@@ -127,6 +132,10 @@ header {
 .other-articles {
   margin-block: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+
+  @include b.respondToDesktop {
+    margin-block: 5rem 4rem;
+  }
 }
 
 .other-article-card {
@@ -158,6 +167,7 @@ header {
       font-size: 2rem;
       color: var(--clr-neutral-grayish-blue);
       margin-block-end: 0.5em;
+      font-weight: 700;
     }
   }
 
