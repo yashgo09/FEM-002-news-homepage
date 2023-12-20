@@ -1,7 +1,4 @@
-.nav__menu-icon {
-  background-color: transparent;
-  border: none;
-}
+@use "./base" as b;
 
 .btn {
   display: inline-block;

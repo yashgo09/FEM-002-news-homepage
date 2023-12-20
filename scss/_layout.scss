@@ -1,5 +1,7 @@
+@use "./base" as b;
+
 body {
-  width: min(90%, 1400px);
+  width: min(90%, 1200px);
   margin-inline: auto;
 }
 
@@ -19,6 +21,27 @@ header {
 
 .nav {
   &__links {
+    display: none;
+    list-style: none;
+    color: var(--clr-neutral-dark-grayish-blue);
+    cursor: pointer;
+
+    @include b.respondToDesktop {
+      display: flex;
+      gap: 2em;
+    }
+  }
+
+  &__link:hover {
+    color: var(--clr-primary-soft-orange);
+  }
+}
+
+.nav__menu-icon {
+  background-color: transparent;
+  border: none;
+
+  @include b.respondToDesktop {
     display: none;
   }
 }
