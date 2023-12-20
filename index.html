@@ -43,8 +43,10 @@
 
     <main class="main grid">
       <article class="main-article">
-        <!-- TODO: Use picture element for different images based on screen size -->
-        <img class="main-article__img" src="./assets/image-web-3-desktop.jpg" alt="Web 3 Image" />
+        <picture>
+          <source media="(min-width: 686px)" srcset="./assets/image-web-3-desktop.jpg" />
+          <img class="main-article__img" src="./assets/image-web-3-mobile.jpg" alt="Web 3" />
+        </picture>
 
         <div class="main-article__details">
           <h1 class="main-article__title">The Bright Future of Web 3.0?</h1>
