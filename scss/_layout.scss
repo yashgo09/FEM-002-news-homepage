@@ -28,8 +28,60 @@ header {
 }
 
 .nav {
-  &__links {
+  &--desktop {
     display: none;
+  }
+
+  &--mobile {
+    &.show-menu::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__mobile-menu {
+    transition: translate 0.3s ease-in-out;
+
+    &[aria-hidden="true"] {
+      translate: 100%;
+    }
+
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    padding: 2rem;
+    width: min(75%, 300px);
+    margin-inline-start: auto;
+    display: grid;
+    gap: 4rem;
+    align-content: start;
+    translate: 0;
+    // grid-auto-rows: 1fr;
+
+    .nav__menu-icon--close {
+      justify-self: end;
+    }
+
+    .nav__link {
+      color: var(--clr-neutral-very-dark-blue);
+      margin-block: 1em;
+    }
+  }
+
+  @include b.respondToDesktop {
+    &--desktop {
+      display: block;
+    }
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__links {
     list-style: none;
     color: var(--clr-neutral-dark-grayish-blue);
     cursor: pointer;
@@ -51,6 +103,7 @@ header {
 .nav__menu-icon {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @include b.respondToDesktop {
     display: none;

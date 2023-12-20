@@ -22,16 +22,27 @@
     <header>
       <img src="./assets/logo.svg" alt="News Homepage Logo" class="logo" />
 
-      <nav class="nav">
+      <nav class="nav nav--mobile">
         <button class="nav__menu-icon nav__menu-icon--open">
           <img src="./assets/icon-menu.svg" alt="Menu Icon" />
         </button>
 
-        <ul class="nav__links">
+        <div class="nav__mobile-menu" aria-hidden="true">
           <button class="nav__menu-icon nav__menu-icon--close">
             <img src="./assets/icon-menu-close.svg" alt="Menu Icon Close" />
           </button>
+          <ul class="nav__links" aria-hidden="true">
+            <li class="nav__link">Home</li>
+            <li class="nav__link">New</li>
+            <li class="nav__link">Popular</li>
+            <li class="nav__link">Trending</li>
+            <li class="nav__link">Categories</li>
+          </ul>
+        </div>
+      </nav>
 
+      <nav class="nav nav--desktop">
+        <ul class="nav__links" aria-hidden="true">
           <li class="nav__link">Home</li>
           <li class="nav__link">New</li>
           <li class="nav__link">Popular</li>
@@ -130,5 +141,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./script.js" defer></script>
   </body>
 </html>
