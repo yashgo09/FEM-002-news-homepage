@@ -36,5 +36,7 @@ img {
 }
 
 @mixin respondToDesktop {
-  @content;
+  @media (min-width: 60rem) {
+    @content;
+  }
 }
